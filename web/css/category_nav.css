@@ -1,0 +1,15 @@
+.main-category {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 190px;
+    text-align:center;
+    margin: 0 -50px 0;
+}
+.category_btn {
+    width: 200px;
+    border: solid 1px #3c3c3c;
+    border-radius: 0;
+    color: black;
+    background: #9b7f51;
+}
