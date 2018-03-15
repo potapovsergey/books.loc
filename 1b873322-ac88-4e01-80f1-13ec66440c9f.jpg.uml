@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>1b873322-ac88-4e01-80f1-13ec66440c9f</OriginalElement>
+  <nodes>
+    <node x="202.0" y="125.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.books</node>
+    <node x="486.0" y="656.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.migration</node>
+    <node x="772.0" y="0.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.auth_rule</node>
+    <node x="117.25" y="448.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.order_books</node>
+    <node x="0.0" y="656.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.user</node>
+    <node x="0.0" y="180.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.order</node>
+    <node x="250.0" y="656.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.image</node>
+    <node x="761.5" y="169.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.auth_item</node>
+    <node x="2.0" y="913.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.profile</node>
+    <node x="810.5" y="415.5">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.auth_item_child</node>
+    <node x="394.5" y="0.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.category</node>
+    <node x="53.5" y="0.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.year</node>
+    <node x="220.5" y="0.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.author</node>
+    <node x="611.5" y="404.0">1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.auth_assignment</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.books" target="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.category">
+      <point x="63.666666666666686" y="-136.5" />
+      <point x="361.1666666666667" y="100.0" />
+      <point x="480.5" y="100.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.auth_assignment" target="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.auth_item">
+      <point x="0.0" y="-48.5" />
+      <point x="701.0" y="379.0" />
+      <point x="790.6666666666666" y="379.0" />
+      <point x="-58.33333333333337" y="92.5" />
+    </edge>
+    <edge source="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.auth_item_child" target="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.auth_item">
+      <point x="-38.5" y="-37.0" />
+      <point x="0.0" y="92.5" />
+    </edge>
+    <edge source="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.books" target="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.year">
+      <point x="-63.66666666666666" y="-136.5" />
+      <point x="233.83333333333334" y="100.0" />
+      <point x="127.0" y="100.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.order_books" target="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.order">
+      <point x="-38.5" y="-81.5" />
+      <point x="155.75" y="423.0" />
+      <point x="91.0" y="423.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.books" target="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.author">
+      <point x="0.0" y="-136.5" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.auth_item" target="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.auth_rule">
+      <point x="0.0" y="-92.5" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.order_books" target="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.books">
+      <point x="38.5" y="-81.5" />
+      <point x="232.75" y="423.0" />
+      <point x="297.5" y="423.0" />
+      <point x="0.0" y="136.5" />
+    </edge>
+    <edge source="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.profile" target="1b873322-ac88-4e01-80f1-13ec66440c9f.TABLE:books.user">
+      <point x="0.0" y="-81.5" />
+      <point x="0.0" y="103.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5082116788321168" x="482.5" y="538.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+
