@@ -12,7 +12,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Modal;
-
+use yii\helpers\Url;
 /* @var $this \yii\web\View */
 /* @var $content string */
 AppAsset::register($this);
@@ -38,12 +38,14 @@ $this->title = 'book shop'
         'options' => [
             'class' => '',
         ],
+
     ]);
+
     $session = Yii::$app->session;
     $cart_id = $session->get('cart.count');
     $menuItems = [
         [
-            'label' => '<span class="glyphicon glyphicon-book Bookmark"></span><span class="badge badge-cart" id="badge_cart" >'. (int)$cart_id .'</span>',
+            'label' => '<span class="glyphicon glyphicon-book Bookmark"></span>',
             'options' => [
                 'class' => 'show-cart'
             ]
@@ -51,27 +53,40 @@ $this->title = 'book shop'
     ];
 
     $menuBtn = [
-        [
-            'label' => 'О Нас',
-            'options' => [
-                'class' => 'btn btn-default'
-            ]
-        ],
+            [
+            'label' => 'Про нас',
+                'url' => ['/main/about'],
+                ],
+             [
+            'label' => 'Контакти',
+                 'url' => ['/main/contacts'],
+            ],
     ];
 
+    $menuBtn_A = [];
+
+    if (Yii::$app->user->can('admin')):
+        $menuBtn_A = [
+            [
+                'label' => 'Адмін Панель',
+                'url' => ['/admin/books'],
+            ]
+        ];
+    endif;
+
     Modal::begin([
-        'header' => '<h3>Корзина</h3>',
+        'header' => '<h3>Кошик</h3>',
         'id' => 'cart',
         'size' => 'modal-lg',
         'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                         <button type="button" class="btn btn-success">Оформить заказ</button>
+                         <a href="'.Url::to(['/order/create', 'id' => false]).'" class="btn btn-success">Оформить заказ</a>
                          <button type="button" class="btn btn-danger clear-cart">Очистить корзину</button>'
     ]);
     Modal::end();
 
     if (Yii::$app->user->isGuest):
-        $menuItems[] = ['label' => 'Регистрация','url' => ['/main/reg']];
-        $menuItems[] = ['label' => 'Войти','url' => ['/main/login']];
+        $menuItems[] = ['label' => 'Реєстрація','url' => ['/main/reg']];
+        $menuItems[] = ['label' => 'Вхід','url' => ['/main/login']];
     else:
         $menuItems[] = [
             'label' => '<span class="glyphicon glyphicon-menu-hamburger"></span>',
@@ -79,12 +94,12 @@ $this->title = 'book shop'
                 '<li class="dropdown-header">'.Yii::$app->user->identity['username'].'</li>',
                 '<li class="divider"></li>',
                 [
-                    'label' => 'Книги',
-                    'url' => ['/books/index'],
+                    'label' => 'Профиль',
+                    'url' => ['/profile/view', 'id' => Yii::$app->user->identity['id']],
                     'linkOptions' => ['data-method' => 'post']
                 ],
                 [
-                    'label' => 'Выход',
+                    'label' => 'Вихід',
                     'url' => ['/main/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ]
@@ -92,10 +107,17 @@ $this->title = 'book shop'
         ];
     endif;
     echo Nav::widget([
+        'items' => $menuBtn_A,
+        'encodeLabels' => false,
+        'options' => [
+            'class' => ' navbar-nav navbar-left'
+        ]
+    ]);
+    echo Nav::widget([
         'items' => $menuBtn,
         'encodeLabels' => false,
         'options' => [
-            'class' => ' navbar-left'
+            'class' => ' navbar-nav navbar-left'
         ]
     ]);
     echo Nav::widget([
@@ -121,7 +143,7 @@ $this->title = 'book shop'
         'search',
         '',
         [
-            'placeholder' => 'Поиск',
+            'placeholder' => 'Пошук',
             'class' => 'form-control'
         ]
     );
@@ -130,7 +152,7 @@ $this->title = 'book shop'
         '<span class="glyphicon glyphicon-search"></span>',
         [
             'class' => 'btn searchMark',
-            'onClick' => 'window.location.href = this.form.action + "-" + this.form.search.value.replace(/[^\w\а-яё\А-ЯЁ]+/g, "_");'
+            'onClick' => 'window.location.href = this.form.action + "?search=" + this.form.search.value.replace(/[^\w\а-яё\А-ЯЁ]+/g, " ");'
         ]
     );
     echo '</span></div>';

@@ -25,7 +25,7 @@ use yii\helpers\Html;
     <?= $form->field($model, 'password')->passwordInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Регистрация', ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton('Реєстрація', ['class' => 'btn btn-primary']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 

@@ -12,14 +12,18 @@ use app\models\Books;
  */
 class BooksSearch extends Books
 {
+    public $min_price = 1;
+    public $max_price = 1000;
+
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['id', 'year', 'created_at', 'update_at'], 'integer'],
-            [['title', 'author', 'description'], 'safe'],
+            [['id', 'created_at', 'updated_at', 'author_id', 'year_id', 'category_id', 'min_price', 'max_price'], 'integer'],
+            [['name', 'description', 'images'], 'safe'],
+            [['price'], 'number'],
         ];
     }
 
@@ -60,14 +64,18 @@ class BooksSearch extends Books
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'year' => $this->year,
+            'price' => $this->price,
             'created_at' => $this->created_at,
-            'update_at' => $this->update_at,
+            'updated_at' => $this->updated_at,
+            'author_id' => $this->author_id,
+            'year_id' => $this->year_id,
+            'category_id' => $this->category_id,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'author', $this->author])
-            ->andFilterWhere(['like', 'description', $this->description]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'images', $this->image]);
+        $query->andFilterWhere(['between', 'price', $this->min_price, $this->max_price]);
 
         return $dataProvider;
     }

@@ -26,10 +26,10 @@ use yii\helpers\Url;
         <?= $form->field($model, 'rememberMe')->checkbox() ?>
     </p>
     <div class="form-group">
-        <?= Html::submitButton('Войти', ['class' => 'btn btn-primary']) ?>
-        <a href="<?= Url::to('/main/reg') ?>" class="btn btn-info">Зарегистрироватся</a>
+        <?= Html::submitButton('Увійти', ['class' => 'btn btn-primary']) ?>
+        <a href="<?= Url::to('/main/reg') ?>" class="btn btn-info">Зареєструватися</a>
     </div>
     <?php ActiveForm::end(); ?>
 
-    <?= Html::a('Забыли пароль?', ['/main/send-email']) ?>
+    <?= Html::a('Забули пароль?', ['/main/send-email']) ?>
 </div><!-- main-login -->

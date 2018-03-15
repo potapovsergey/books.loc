@@ -1,48 +1,53 @@
 #navigation.navbar-default .navbar-brand {
     margin: -13px auto 0;
 }
+
 .Bookmark {
-    color: rgba(122, 48, 25, 0.67);
+    color: white;
 }
 .searchMark {
-    background-color: #c0a16b ;
+    background-color: rgba(255, 123, 0, 1);
+}
+#navigation.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
 }
 #navigation.navbar-default {
-    font-size: 16px;
-    background-color: rgba(210, 182, 157, 1);
-    background: -webkit-linear-gradient(top, rgba(153, 131, 110, 1) 0%, rgba(210, 182, 157, 1) 100%);
-    background: linear-gradient(to bottom, rgba(153, 131, 110, 1) 0%, rgba(210, 182, 157, 1) 100%);
+    font-size: 19px;
+    background-color: rgba(33, 29, 29, 1);
     border-width: 0px;
     border-radius: 0px;
 }
 #navigation.navbar-default .navbar-nav>li>a {
-    color: rgba(0, 0, 0, 1);
-    background-color: rgba(210, 182, 157, 1);
-    background: -webkit-linear-gradient(top, rgba(153, 131, 110, 1) 0%, rgba(210, 182, 157, 1) 100%);
-    background: linear-gradient(to bottom, rgba(153, 131, 110, 1) 0%, rgba(210, 182, 157, 1) 100%);
+    color: rgba(255, 123, 0, 1);
+    background-color: rgba(33, 29, 29, 1);
 }
 #navigation.navbar-default .navbar-nav>li>a:hover,
 #navigation.navbar-default .navbar-nav>li>a:focus {
     color: rgba(0, 0, 0, 1);
-    background-color: rgba(210, 182, 157, 1);
+    background-color: rgba(255, 123, 0, 1);
 }
 #navigation.navbar-default .navbar-nav>.active>a,
 #navigation.navbar-default .navbar-nav>.active>a:hover,
 #navigation.navbar-default .navbar-nav>.active>a:focus {
-    color: rgba(0, 0, 0, 1);
-    background-color: rgba(210, 182, 157, 1);
+    color: rgba(255, 123, 0, 1);
+    background-color: rgba(89, 88, 84, 1);
 }
 #navigation.navbar-default .navbar-toggle {
-    border-color: #d2b69d;
+    border-color: #595854;
 }
 #navigation.navbar-default .navbar-toggle:hover,
 #navigation.navbar-default .navbar-toggle:focus {
-    background-color: #d2b69d;
+    background-color: #595854;
 }
 #navigation.navbar-default .navbar-toggle .icon-bar {
-    background-color: #d2b69d;
+    background-color: #595854;
 }
 #navigation.navbar-default .navbar-toggle:hover .icon-bar,
 #navigation.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #d2b69d;
+    background-color: #211d1d;
+}
+.info{
+    background-color: black;
+    color: rgba(255, 123, 0, 1);
+    text-align: center;
 }

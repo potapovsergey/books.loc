@@ -1,8 +1,380 @@
 .mainContent {
     position: relative;
-    margin: 0 200px 0;
-    background-color: white;
+    margin: -145px 200px 0;
+    flex: 1 0 auto;
+    background-color: whitesmoke;
     width: 800px;
-    height: 600px;
+    height: 1445px;
+    border-style: double;
+    border-color: rgba(255, 123, 0, 1);
+}
+.Content{
+    padding: 5px;
+}
 
+.bookss {
+    position: static;
+    float: left;
+    text-align: center;
+    margin: 0 10px 0;
+}
+
+#bookstext2{
+
+    font-size: 25px;
+    color: rgba(255, 123, 0, 1);
+}
+#bookstext3{
+    font-size: 20px;
+}
+.booksinfo{
+    padding-left: 100px;
+    text-align: justify;
+    padding-bottom: 10px;
+    /*height: 250px;*/
+
+
+
+}
+#bookstext{
+    color: rgba(255, 123, 0, 1);
+    font-size: 17px;
+}
+#price{
+    text-align: center;
+    color: rgba(255, 123, 0, 1);
+}
+#line{
+    color: black;
+}
+.btn-info{
+    background-color: rgba(255, 123, 0, 1);
+    border-style: solid;
+    border-color: black;
+    border-color: rgba(255, 123, 0, 1);
+    color: black;
+}
+.btn-info:Hover{
+    background-color: black;
+    color: rgba(255, 123, 0, 1);
+    border-style: solid;
+    border-color: black;
+    border-color: rgba(255, 123, 0, 1);
+}
+.btn-primary{
+    background-color: whitesmoke;
+    border-color: rgba(255, 123, 0, 1);
+    color: black;
+}
+.btn-primary:Hover{
+    background-color: rgba(255, 123, 0, 1);
+    border-style: solid;
+    border-color: black;
+}
+.btn-success{
+    background-color: rgba(255, 123, 0, 1);
+    border-style: solid;
+    border-color: black;
+    border-color: rgba(255, 123, 0, 1);
+    color: black;
+}
+.btn-success:Hover{
+    background-color: black;
+    color: rgba(255, 123, 0, 1);
+    border-style: solid;
+    border-color: black;
+    border-color: rgba(255, 123, 0, 1);
+}
+.Buy_btn{
+    background-color: whitesmoke;
+    border-color: rgba(255, 123, 0, 1);
+    color: black;
+    width: 100px;
+    font-size: 16px;
+}
+.Buy_btn:Hover{
+background: rgba(255, 123, 0, 1);
+color: whitesmoke;
+}
+.Buy{
+    text-align: center;
+    padding-top: 10px;
+}
+.Price{
+    text-align: center;
+    width: 133px;
+    padding-top: 5px;
+    font-size: 16px;
+    margin: 0 17px 0;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+
+    background-color: rgba(255, 123, 0, 1);
+    text-align: center;
+    color: black;
+    border-color: black;
+    border-radius: 5px;
+
+}
+.pagination{
+
+    background-color: rgba(255, 123, 0, 1);
+    margin: -16px 0 0;
+    color: black;
+
+}
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    color: black;
+
+
+}
+.pagination > li > a, .pagination > li > span {
+    color: black;
+
+}
+.Author_btn{
+    background-color: whitesmoke;
+    border-color: rgba(255, 123, 0, 1);
+    color: black;
+    font-size: 16px;
+}
+.Author_btn:Hover{
+    background: rgba(255, 123, 0, 1);
+    color: whitesmoke;
+}
+
+.block_carousel {
+    position: relative;
+    width: 1350px;
+    height: 300px;
+    margin: -145px 200px 0;
+}
+
+.block_books {
+    /*margin: 10px 10px 10px;*/
+    /*width: 350px;*/
+    /*height: 300px;*/
+}
+
+.carousel {
+    position: relative;
+    width: 398px;
+    padding: 10px 40px;
+    border: 1px solid #CCC;
+    border-radius: 15px;
+    background: #eee;
+}
+
+.carousel img {
+    width: 130px;
+    height: 130px;
+    /* по умолчанию inline, в ряде браузеров это даст лишнее пространство вокруг элементов */
+
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    top: 60px;
+    padding: 0;
+    background: #ddd;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+.arrow:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
+.prev {
+    left: 7px;
+}
+
+.next {
+    right: 7px;
+}
+
+.gallery {
+    width: 390px;
+    overflow: hidden;
+}
+
+.gallery ul {
+    height: 130px;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    /* remove white-space between inline-block'ed li */
+    /* http://davidwalsh.name/remove-whitespace-inline-block */
+
+    font-size: 0;
+}
+
+.gallery li {
+    display: inline-block;
+}
+
+
+@media (max-width: 300px) {
+    .carosel-item {
+        width: 100%;
+    }
+}
+@media (min-width: 300px) {
+    .carosel-item {
+        width: 50%;
+    }
+}
+@media (min-width: 500px) {
+    .carosel-item {
+        width: 33.333%;
+    }
+}
+@media (min-width: 768px) {
+    .carosel-item {
+        width: 25%;
+    }
+}
+.carosel {
+    position: relative;
+    width: 900px;
+    margin: -190px 200px 0;
+    padding-bottom: 20px;
+    background-color: white;
+    border: dashed 1px;
+    border-color: rgba(255, 123, 0, 1);
+}
+.carosel-inner {
+    white-space: nowrap;
+    margin: 0 50px 0;
+    overflow: hidden;
+    font-size: 15px;
+
+}
+
+.carosel-item {
+    margin: 0 45px 0;
+    display: inline-block;
+    box-shadow: #888888;
+    width: 160px;
+    text-align: center;
+}
+.carosel-control {
+    position: absolute;
+    top: 50%;
+    padding: 15px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+    display: inline-block;
+}
+.carosel-control-left {
+    left: 15px;
+}
+.carosel-control-right {
+    right: 15px;
+}
+.carosel-control:active{
+    color: rgba(255, 123, 0, 1);
+}
+.carosel-control:hover {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+.new{
+    font-size: 30px;
+    color: rgba(255, 123, 0, 1);
+    margin: 10px 0 0;
+    padding: 5px;
+    text-align: center;
+}
+.block_carousel{
+    position: relative;
+    height: 600px;
+    /*background-color: #2b542c;*/
+    /*border: solid 2px black;*/
+}
+
+.image_carousel{
+    margin: auto;
+    width: 900px;
+    height: 500px;
+}
+
+.crousel{
+    width: 900px;
+    height: 500px;
+}
+#in_text{
+    color: rgba(255, 123, 0, 1);
+}
+#description{
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+#description_name{
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+.panel{
+    text-align: center;
+    color: rgba(255, 123, 0, 1);
+    font-size: 15px;
+    pading: 0;
+}
+
+.Content_books{
+    text-align: center;
+    margin: 100px 200px 0;
+    font-size: 20px;
+    background-color: whitesmoke;
+
+}
+#aboutT{
+    font-size: 25px;
+}
+.About_main{
+    font-size: 25px;
+    color: #8c8c8c;
+    text-align: justify;
+}
+#about_main{
+
+}
+
+.carosel-item{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.btnBuy{
+    margin: 0 15px 0;
+}
+
+.sort {
+    position: fixed;
+    margin: -145px 1005px 0;
+    width: 250px;
+    height: 400px;
+    z-index: 100;
+}
+
+.books_search_bar {
+    padding: 10px 10px 10px;
+    text-align: center;
+    border: dashed rgba(255, 123, 0, 1) 2px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
 }

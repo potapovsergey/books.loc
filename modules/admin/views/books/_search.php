@@ -17,17 +17,23 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'title') ?>
-
-    <?= $form->field($model, 'author') ?>
-
-    <?= $form->field($model, 'year') ?>
+    <?= $form->field($model, 'name') ?>
 
     <?= $form->field($model, 'description') ?>
 
-    <?php // echo $form->field($model, 'created_at') ?>
+    <?= $form->field($model, 'price') ?>
 
-    <?php // echo $form->field($model, 'update_at') ?>
+    <?= $form->field($model, 'created_at') ?>
+
+    <?php // echo $form->field($model, 'updated_at') ?>
+
+    <?php // echo $form->field($model, 'images') ?>
+
+    <?php // echo $form->field($model, 'author_id') ?>
+
+    <?php // echo $form->field($model, 'year_id') ?>
+
+    <?php // echo $form->field($model, 'category_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

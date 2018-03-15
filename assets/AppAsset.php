@@ -22,8 +22,13 @@ class AppAsset extends AssetBundle
         'css/navigation.css',
         'css/category_nav.css',
         'css/Content.css',
+        'css/about.css',
+
     ];
     public $js = [
+        'js/carousel.js',
+        'js/cart.js',
+        'js/main.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

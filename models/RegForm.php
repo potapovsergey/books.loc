@@ -44,8 +44,8 @@ class RegForm extends Model
     public function attributeLabels()
     {
         return [
-            'username' => 'Имя пользователя',
-            'email' => 'Эл. почта',
+            'username' => 'Ім`я користувача',
+            'email' => 'Эл. пошта',
             'password' => 'Пароль'
         ];
     }

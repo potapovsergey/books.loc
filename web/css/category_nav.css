@@ -1,15 +1,28 @@
 .main-category {
     position: relative;
-    float: left;
+    /*float: left;*/
     width: 200px;
     height: 190px;
-    text-align:center;
+    text-align: center;
     margin: 0 -50px 0;
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 30px;
 }
 .category_btn {
+
     width: 200px;
-    border: solid 1px #3c3c3c;
-    border-radius: 0;
+    border: solid 1px rgba(255, 123, 0, 1);
+    border-radius: 6px;
     color: black;
-    background: #9b7f51;
+    background:  whitesmoke;
+    font-size: 16px;
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+}
+.category_btn:Hover{
+    background: black;
+    color:rgba(255, 123, 0, 1);
+
+}
+.head-category{
+    color: rgba(255, 123, 0, 1);
 }
